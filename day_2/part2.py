@@ -33,7 +33,6 @@ def main():
 
     totalRibbon = 0
     for line in rawlines:
-        # print(line)
         box = line.split('x')
         totalRibbon = totalRibbon + calcRibbon(length=int(box[0]), width=int(box[1]), height=int(box[2]))
 

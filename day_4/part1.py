@@ -20,15 +20,11 @@ import hashlib
 
 def main():
     puzzle = 'bgvyzdsv'
-    # puzzle = 'abcdef'
     counter = 0
-    # test = '1234567890'
-    # print(test[0:5])
     while True:
         secretKey = puzzle + str(counter)
         result = hashlib.md5(secretKey.encode()).hexdigest()
-        # print(result)
-        if result[0:6] == '000000':
+        if result[0:5] == '00000':
             break
         counter += 1
         print(counter)

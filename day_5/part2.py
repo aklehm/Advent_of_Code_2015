@@ -22,22 +22,17 @@ How many strings are nice under these new rules?
 
 
 def checkNice(string: str) -> bool:
-    # print(f'String: {string}')
     foundPair = False
     for i in range(len(string)):
-        # print(i)
-        # print(f'String: {string}')
         if i < len(string)-3:
             firstPair = string[i:i+2]
             remaining = string[i+2:]
-            # print(f'First piar: {firstPair}')
-            # print(f'Remaining: {remaining}')
+
             if firstPair in remaining:
                 foundPair = True
     if not foundPair:
         return False
 
-    # secondLastChar = ''
     foundBetween = False
     for i in range(len(string)):
         if i > 2 and string[i] == string[i-2]:
